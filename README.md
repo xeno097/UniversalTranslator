@@ -22,6 +22,6 @@ Windows:
 
 Insert path to your file containig values to convert in the format
 
-value,input meausre, output measure
+value,input_measure_unit,output_measure_unit,
 
 
