@@ -1,8 +1,3 @@
 from InputParser import input_parser
 
-
-#dir = input()
-
-test = inputParser("S:/Desktop/new.txt")
-
-test.reader()
+test = input_parser("S:/Desktop/new.txt")
