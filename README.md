@@ -36,8 +36,6 @@ Be sure to move or copy to another folder previosuly created 'output.txt' file o
 - Finally run 'python3 MetricUnitConverter <your/file/directory/yourfile.txt>' command
 - Wait for the program to display the 'Completed' message in Terminal
 
-- Final result ![](./linux.PNG)
-
 ### Windows
 
 #### Part 1
@@ -66,4 +64,6 @@ If you have python 3.7.3 already installed on your pc please ignore these steps
 - Finally run 'python3 MetricUnitConverter <your/file/directory/yourfile.txt>' command
 - Wait for the program to display the 'Completed' message in CMD
 
-- Final result ![](./windows.PNG)
+Final result ![](./windows.PNG)
+
+Final result ![](./linux.PNG)
