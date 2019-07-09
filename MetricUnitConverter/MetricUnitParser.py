@@ -1,4 +1,4 @@
-from Errors import *
+from Errors import MeasureUnitError
 
 
 factors = dict()
