@@ -1,4 +1,6 @@
-from math import pow
+from Errors import *
+
+
 factors = dict()
 factors["ym"] = -24
 factors["zm"] = -21
@@ -26,12 +28,23 @@ factors["Ym"] = 24
 class metric_unit_parser():
 
     def get_conversion_factor(self, input_unit, output_unit):
+
+        if(self.check_measure_unit(input_unit)):
+            raise MeasureUnitError(input_unit)
+
+        if(self.check_measure_unit(output_unit)):
+            raise MeasureUnitError(output_unit)
+
         input_factor = factors[input_unit]
         output_factor = factors[output_unit]
 
         exp = input_factor - output_factor
 
-        print(exp)
         factor = 10**exp
-        print(factor)
         return factor
+
+    def check_measure_unit(self, unit):
+        check = unit in factors
+        if(check):
+            return False
+        return True

@@ -1,3 +1,9 @@
 {
-    "python.pythonPath": "MetricUnitConverter\\Scripts\\python.exe"
+    "python.pythonPath": "MetricUnitConverter\\Scripts\\python.exe",
+    "python.testing.pytestArgs": [
+        "MetricUnitConverter"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pytestEnabled": true
 }

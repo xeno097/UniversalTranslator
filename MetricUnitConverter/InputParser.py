@@ -1,10 +1,15 @@
 from MetricUnitConverter import metric_unit_converter
+from Errors import FileOrPathNotFoundError
 
 
 class input_parser():
 
     def __init__(self, input_file_dir: str):
         self.input_file_dir = input_file_dir
+
+        if(self.try_open()):
+            raise FileOrPathNotFoundError(self.input_file_dir)
+
         self.output_file_dir = self.build_output_dir()
         self.create_output_file()
         self.reader()
@@ -30,10 +35,19 @@ class input_parser():
 
                 values[len(values)-1] = (str(output_value)+'\n')
                 line = ",".join(values)
-                print(line)
                 self.writer(line)
                 line = input_file.readline()
 
     def writer(self, line):
         with open(self.output_file_dir, "a+") as output_file:
             output_file.write(line)
+
+    def try_open(self):
+        check = False
+        try:
+            stream = open(self.input_file_dir)
+            stream.close()
+        except Exception:
+            check = True
+
+        return check
