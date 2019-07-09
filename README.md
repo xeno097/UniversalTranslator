@@ -66,4 +66,4 @@ If you have python 3.7.3 already installed on your pc please ignore these steps
 
 Final result ![](./windows.PNG)
 
-Final result ![](./linux.PNG)
+Final result ![](./linuxTerminal.PNG)
