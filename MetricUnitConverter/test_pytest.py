@@ -5,7 +5,8 @@ from MetricUnitConverter import *
 
 
 def test_IfFileDoesNotExist_Raises_FIleNotFoundException():
-    pass
+    with pytest.raises(FileOrPathNotFoundError):
+        assert input_parser("s:/Directory/That/Does/Not/Exist")
 
 
 def test_IfMeasureUnitIsNotInDict_Raises_MeasureUnitError():
